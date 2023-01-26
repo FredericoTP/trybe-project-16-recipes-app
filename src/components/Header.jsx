@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import imgProfile from '../images/profileIcon.svg';
 import imgSearch from '../images/searchIcon.svg';
+import SearchBar from './SearchBar';
 
 function Header() {
   const [inputDisabled, setInputDisabled] = useState(false);
@@ -45,12 +46,9 @@ function Header() {
         )
       }
       <h1 data-testid="page-title">{handleTitle()}</h1>
+
       {
-        inputDisabled && <input
-          data-testid="search-input"
-          type="text"
-          placeholder="pesquisar"
-        />
+        inputDisabled && <SearchBar />
       }
     </div>
   );
