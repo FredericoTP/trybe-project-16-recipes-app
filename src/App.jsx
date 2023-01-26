@@ -9,30 +9,33 @@ import RecipeInProgress from './pages/RecipeInProgress';
 import Profile from './pages/Profile';
 import DoneRecipes from './pages/DoneRecipes';
 import FavoriteRecipes from './pages/FavoriteRecipes';
+import MainProvider from './context/MainProvider';
 
 function App() {
   return (
     <LoginProvider>
-      <Switch>
-        <Route exact path="/" component={ Login } />
-        <Route exact path="/meals" render={ () => <Recipes /> } />
-        <Route exact path="/drinks" render={ () => <Recipes /> } />
-        <Route exact path="/meals/:id" render={ () => <RecipeDetails /> } />
-        <Route exatc path="/drinks/:id" render={ () => <RecipeDetails /> } />
-        <Route
-          exact
-          path="/meals/:id/in-progress"
-          render={ () => <RecipeInProgress /> }
-        />
-        <Route
-          exact
-          path="/drinks/:id/in-progress"
-          render={ () => <RecipeInProgress /> }
-        />
-        <Route exact path="/profile" component={ Profile } />
-        <Route exact path="/done-recipes" component={ DoneRecipes } />
-        <Route exact path="/favorite-recipes" component={ FavoriteRecipes } />
-      </Switch>
+      <MainProvider>
+        <Switch>
+          <Route exact path="/" component={ Login } />
+          <Route exact path="/meals" render={ () => <Recipes /> } />
+          <Route exact path="/drinks" render={ () => <Recipes /> } />
+          <Route exact path="/meals/:id" render={ () => <RecipeDetails /> } />
+          <Route exatc path="/drinks/:id" render={ () => <RecipeDetails /> } />
+          <Route
+            exact
+            path="/meals/:id/in-progress"
+            render={ () => <RecipeInProgress /> }
+          />
+          <Route
+            exact
+            path="/drinks/:id/in-progress"
+            render={ () => <RecipeInProgress /> }
+          />
+          <Route exact path="/profile" component={ Profile } />
+          <Route exact path="/done-recipes" component={ DoneRecipes } />
+          <Route exact path="/favorite-recipes" component={ FavoriteRecipes } />
+        </Switch>
+      </MainProvider>
     </LoginProvider>
   );
 }
