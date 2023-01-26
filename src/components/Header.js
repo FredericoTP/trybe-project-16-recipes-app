@@ -1,9 +1,10 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import imgProfile from '../images/profileIcon.svg';
 import imgSearch from '../images/searchIcon.svg';
 
 function Header() {
+  const [inputDisabled, setInputDisabled] = useState(false);
   const history = useHistory();
   const { pathname } = history.location;
 
@@ -24,16 +25,17 @@ function Header() {
 
   return (
     <div>
-      <button>
+      <Link to="/profile">
         <img
           src={ imgProfile }
           alt="profile"
           data-testid="profile-top-btn"
         />
-      </button>
+      </Link>
+
       {
         (pathname === '/meals' || pathname === '/drinks') && (
-          <button>
+          <button onClick={ () => setInputDisabled(!inputDisabled) }>
             <img
               src={ imgSearch }
               alt="search"
@@ -43,6 +45,13 @@ function Header() {
         )
       }
       <h1 data-testid="page-title">{handleTitle()}</h1>
+      {
+        inputDisabled && <input
+          data-testid="search-input"
+          type="text"
+          placeholder="pesquisar"
+        />
+      }
     </div>
   );
 }
