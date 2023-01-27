@@ -1,21 +1,22 @@
 import { useHistory } from 'react-router-dom';
 
 function ProfileCard() {
-  const userEmail = JSON.parse(localStorage.getItem('user'));
-  console.log(userEmail);
   const history = useHistory();
-
   const handleLogoutButton = () => {
     localStorage.clear();
     history.push('/');
   };
   return (
     <>
-      <h3
-        data-testid="profile-email"
-      >
-        { userEmail.email }
-      </h3>
+      {
+        localStorage.getItem('user') && (
+          <h3
+            data-testid="profile-email"
+          >
+            { JSON.parse(localStorage.getItem('user')).email }
+          </h3>
+        )
+      }
       <button
         data-testid="profile-done-btn"
         onClick={ () => history.push('/done-recipes') }
