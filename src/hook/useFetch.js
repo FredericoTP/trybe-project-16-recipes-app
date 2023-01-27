@@ -22,8 +22,17 @@ function useFetch() {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
       redirect(data);
+      setDataValue(data);
+    } catch (e) {
+      setError(e);
+    }
+  };
+
+  const fetchApiFiltered = async (url) => {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
       setDataValue(data);
     } catch (e) {
       setError(e);
@@ -34,6 +43,8 @@ function useFetch() {
     dataValue,
     error,
     fetchApi,
+    setDataValue,
+    fetchApiFiltered,
   };
 }
 
