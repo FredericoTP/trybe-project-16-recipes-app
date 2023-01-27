@@ -6,7 +6,7 @@ import useInput from '../hook/useInput';
 import useFetch from '../hook/useFetch';
 
 function MainProvider({ children }) {
-  const fetchApiDetails = useFetch();
+  const detailsFetch = useFetch();
   const categoryFetch = useFetch();
   const { dataValue, error, fetchApi } = useFetch();
   const filterFetch = useFetch();
@@ -65,7 +65,7 @@ function MainProvider({ children }) {
     filterFetch,
     fetchApi,
     handleClickSearch,
-    fetchApiDetails,
+    detailsFetch,
   }), [searchInput, radioInput]);
 
   return (
