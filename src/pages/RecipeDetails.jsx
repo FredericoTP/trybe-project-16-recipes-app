@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import MainContext from '../context/MainContext';
 
 function RecipeDetails() {
-  const { dataValue } = useContext(MainContext);
+  const { detailsFetch } = useContext(MainContext);
+  console.log(detailsFetch.dataValue);
   return (
     <div>
       {
-        dataValue.meals && dataValue.meals.map((element) => (
+        detailsFetch.dataValue.meals && detailsFetch.dataValue.meals.map((element) => (
           <div key={ element.IdMeal }>
             <img
               data-testid="recipe-photo"
@@ -106,14 +107,14 @@ function RecipeDetails() {
               title="YouTube video player"
               allow="accelerometer; autoplay;
               clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             />
           </div>
         ))
       }
 
       {
-        dataValue.drinks && dataValue.drinks.map((element) => (
+        detailsFetch.dataValue.drinks && detailsFetch.dataValue.drinks.map((element) => (
           <div key={ element.strDrink }>
             <img
               data-testid="recipe-photo"
@@ -213,7 +214,7 @@ function RecipeDetails() {
               title="YouTube video player"
               allow="accelerometer; autoplay;
               clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             />
           </div>
         ))
