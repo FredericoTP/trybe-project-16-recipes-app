@@ -29,11 +29,22 @@ function useFetch() {
     }
   };
 
+  const fetchApiFiltered = async (url) => {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setDataValue(data);
+    } catch (e) {
+      setError(e);
+    }
+  };
+
   return {
     dataValue,
     error,
     fetchApi,
     setDataValue,
+    fetchApiFiltered,
   };
 }
 
