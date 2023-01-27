@@ -3,7 +3,6 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import LoginProvider from './context/LoginProvider';
-import RecipeDetails from './pages/RecipeDetails';
 import RecipeInProgress from './pages/RecipeInProgress';
 import Profile from './pages/Profile';
 import DoneRecipes from './pages/DoneRecipes';
@@ -11,6 +10,8 @@ import FavoriteRecipes from './pages/FavoriteRecipes';
 import MainProvider from './context/MainProvider';
 import Meals from './pages/Meals';
 import Drinks from './pages/Drinks';
+import MealsDetails from './pages/MealsDetails';
+import DrinksDetails from './pages/DrinksDetails';
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
           <Route exact path="/" component={ Login } />
           <Route exact path="/meals" render={ () => <Meals /> } />
           <Route exact path="/drinks" render={ () => <Drinks /> } />
-          <Route exact path="/meals/:id" render={ () => <RecipeDetails /> } />
-          <Route exatc path="/drinks/:id" render={ () => <RecipeDetails /> } />
+          <Route exact path="/meals/:id" render={ () => <MealsDetails /> } />
+          <Route exatc path="/drinks/:id" render={ () => <DrinksDetails /> } />
           <Route
             exact
             path="/meals/:id/in-progress"
