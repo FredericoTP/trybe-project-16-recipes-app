@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import MainContext from '../context/MainContext';
 import Carousel from './Carousel';
+import ButtonRecipeDetails from './ButtonRecipeDetails';
 
 function RecipeDetails() {
   const { detailsFetch } = useContext(MainContext);
@@ -95,6 +96,7 @@ function RecipeDetails() {
         ))
       }
       <Carousel />
+      <ButtonRecipeDetails />
     </div>
   );
 }
