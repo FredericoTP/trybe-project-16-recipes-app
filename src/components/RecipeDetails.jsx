@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import MainContext from '../context/MainContext';
-import Carrousel from '../tests/Carrousel';
+import Carousel from './Carousel';
 
 function RecipeDetails() {
   const { detailsFetch } = useContext(MainContext);
@@ -94,7 +94,7 @@ function RecipeDetails() {
           </div>
         ))
       }
-      <Carrousel />
+      <Carousel />
     </div>
   );
 }
