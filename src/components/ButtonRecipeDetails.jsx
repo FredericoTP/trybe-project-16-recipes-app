@@ -1,18 +1,13 @@
+import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import LocalStorageProvider from '../context/LocalStorageProvider';
 import '../style/ButtonRecipeDetails.css';
 
 function ButtonRecipeDetails() {
   const { id } = useParams();
-  if (!localStorage.getItem('doneRecipes')) {
-    localStorage.setItem('doneRecipes', []);
-  }
-  if (!localStorage.getItem('favoriteRecipes')) {
-    localStorage.setItem('favoriteRecipes', []);
-  }
-  if (!localStorage.getItem('inProgressRecipes')) {
-    localStorage.setItem('inProgressRecipes', {});
-  }
-  const doneRecipes = localStorage.getItem('doneRecipes');
+  const {
+    values: { doneRecipes, favoriteRecipes, inProgressRecipes },
+  } = useContext(LocalStorageProvider);
 
   function isDone() {
     if (doneRecipes.length > 0) {
