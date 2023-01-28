@@ -9,7 +9,7 @@ function DrinksDetails() {
 
   useEffect(() => {
     const fetchDetails = async () => {
-      await detailsFetch.fetchApi(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
+      await detailsFetch.fetchApiFiltered(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
       await fetchApi('https://www.themealdb.com/api/json/v1/1/search.php?s=');
     };
     fetchDetails();

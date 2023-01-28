@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import MainContext from '../context/MainContext';
+import Carrousel from '../tests/Carrousel';
 
 function RecipeDetails() {
   const { detailsFetch } = useContext(MainContext);
@@ -39,7 +40,7 @@ function RecipeDetails() {
             {
               getItens().map((element, index) => (
                 <p
-                  key={ element }
+                  key={ `${element}${index}` }
                   data-testid={ `${index}-ingredient-name-and-measure` }
                 >
                   {
@@ -72,7 +73,10 @@ function RecipeDetails() {
             <h4 data-testid="recipe-category">{ item.strAlcoholic }</h4>
             {
               getItens().map((element, index) => (
-                <p key={ element } data-testid={ `${index}-ingredient-name-and-measure` }>
+                <p
+                  key={ `${element}${index}` }
+                  data-testid={ `${index}-ingredient-name-and-measure` }
+                >
                   {
                     ` ${element}`
                   }
@@ -90,6 +94,7 @@ function RecipeDetails() {
           </div>
         ))
       }
+      <Carrousel />
     </div>
   );
 }
