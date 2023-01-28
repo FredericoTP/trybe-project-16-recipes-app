@@ -13,7 +13,7 @@ function MealsDetails() {
     };
     fetchDetails();
   }, []);
-  console.log(detailsFetch.dataValue);
+
   return (
     <div>
       {
