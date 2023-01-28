@@ -8,7 +8,20 @@ function LocalStorageProvider({ children }) {
   const [favoriteRecipes, setFavoriteRecipes] = useLocalStorage('favoriteRecipes', []);
   const [inProgressRecipes,
     setInProgressRecipes,
-  ] = useLocalStorage('inProgressRecipes', []);
+  ] = useLocalStorage('inProgressRecipes', {});
+
+  function addFavorite({ id, type, nationality, category, alcoholicOrNot, name, image }) {
+    const object = {
+      id,
+      type,
+      nationality,
+      category,
+      alcoholicOrNot,
+      name,
+      image,
+    };
+    setFavoriteRecipes([...favoriteRecipes, object]);
+  }
 
   const localStorage = useMemo(() => ({
     values: {
@@ -20,6 +33,9 @@ function LocalStorageProvider({ children }) {
       setDoneRecipes,
       setFavoriteRecipes,
       setInProgressRecipes,
+    },
+    functions: {
+      addFavorite,
     },
   }), [doneRecipes, favoriteRecipes, inProgressRecipes]);
 

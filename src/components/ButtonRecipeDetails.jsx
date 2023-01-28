@@ -1,33 +1,59 @@
 import { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import LocalStorageContext from '../context/LocalStorageContext';
+import MainContext from '../context/MainContext';
 import '../style/ButtonRecipeDetails.css';
 
 function ButtonRecipeDetails() {
   const { id } = useParams();
   const {
-    values: { doneRecipes, favoriteRecipes, inProgressRecipes },
+    values: { doneRecipes, inProgressRecipes },
   } = useContext(LocalStorageContext);
+  const { detailsFetch } = useContext(MainContext);
 
   function isDone() {
-    if (doneRecipes.length > 0) {
-      return doneRecipes.some((item) => item.id === id);
+    if (doneRecipes) {
+      return !doneRecipes.some((item) => item.id === id);
     }
     return true;
   }
 
-  console.log('usar nos próximos requesitos', favoriteRecipes, inProgressRecipes);
+  function inProgress() {
+    if (inProgressRecipes) {
+      if (inProgressRecipes.meals) {
+        return !!inProgressRecipes.meals[id];
+      }
+      if (inProgressRecipes.drinks) {
+        return !!inProgressRecipes.drinks[id];
+      }
+    }
+    return false;
+  }
+
+  // favoriteRecipes
 
   return (
     <div>
       {
-        isDone() && (
-          <button
+        (detailsFetch.dataValue.meals && isDone()) && (
+          <Link
+            to={ `/meals/${id}/in-progress` }
             className="btn-recipe-details"
             data-testid="start-recipe-btn"
           >
-            Start Recipe
-          </button>
+            { inProgress() ? 'Continue Recipe' : 'Start Recipe'}
+          </Link>
+        )
+      }
+      {
+        (detailsFetch.dataValue.drinks && isDone()) && (
+          <Link
+            to={ `/drinks/${id}/in-progress` }
+            className="btn-recipe-details"
+            data-testid="start-recipe-btn"
+          >
+            { inProgress() ? 'Continue Recipe' : 'Start Recipe'}
+          </Link>
         )
       }
     </div>

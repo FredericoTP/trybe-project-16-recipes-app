@@ -1,10 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import shareIcon from '../images/shareIcon.svg';
 import MainContext from '../context/MainContext';
 import Carousel from './Carousel';
 import ButtonRecipeDetails from './ButtonRecipeDetails';
+import LocalStorageContext from '../context/LocalStorageContext';
+// import favorited from '../images/whiteHeartIcon.svg';
+// import notFavorited from '../images/blackHeartIcon.svg';
+
+const copy = require('clipboard-copy');
 
 function RecipeDetails() {
+  const { functions } = useContext(LocalStorageContext);
   const { detailsFetch } = useContext(MainContext);
+  const [isShared, setIsShared] = useState(false);
 
   function getItens() {
     let entries = [];
@@ -26,11 +34,39 @@ function RecipeDetails() {
     return combine;
   }
 
+  function handleClickShare() {
+    copy(window.location.href);
+    setIsShared(true);
+  }
+
   return (
     <div>
       {
         detailsFetch.dataValue.meals && detailsFetch.dataValue.meals.map((item) => (
           <div key={ item.strMeal }>
+            <button
+              data-testid="share-btn"
+              onClick={ handleClickShare }
+            >
+              <img src={ shareIcon } alt="share" />
+            </button>
+            <button
+              data-testid="favorite-btn"
+              onClick={ () => functions.addFavorite({
+                id: item.idMeal,
+                type: 'meal',
+                nationality: item.strArea,
+                category: item.strCategory,
+                alcoholicOrNot: '',
+                name: item.strMeal,
+                image: item.strMealThumb,
+              }) }
+            >
+              asd
+            </button>
+            {
+              isShared && <small>Link copied!</small>
+            }
             <img
               data-testid="recipe-photo"
               src={ item.strMealThumb }
@@ -65,6 +101,29 @@ function RecipeDetails() {
       {
         detailsFetch.dataValue.drinks && detailsFetch.dataValue.drinks.map((item) => (
           <div key={ item.strDrink }>
+            <button
+              data-testid="share-btn"
+              onClick={ handleClickShare }
+            >
+              <img src={ shareIcon } alt="share" />
+            </button>
+            <button
+              data-testid="favorite-btn"
+              onClick={ () => functions.addFavorite({
+                id: item.idDrink,
+                type: 'drink',
+                nationality: (item.strArea ? item.strArea : ''),
+                category: item.strCategory,
+                alcoholicOrNot: item.strAlcoholic,
+                name: item.strDrink,
+                image: item.strDrinkThumb,
+              }) }
+            >
+              asd
+            </button>
+            {
+              isShared && <small>Link copied!</small>
+            }
             <img
               data-testid="recipe-photo"
               src={ item.strDrinkThumb }
