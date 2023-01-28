@@ -6,15 +6,14 @@ import RecipeDetails from '../components/RecipeDetails';
 function MealsDetails() {
   const { id } = useParams();
   const { fetchApi, detailsFetch } = useContext(MainContext);
-
   useEffect(() => {
     const fetchDetails = async () => {
-      await detailsFetch.fetchApi(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+      await detailsFetch.fetchApiFiltered(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
       await fetchApi('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
     };
     fetchDetails();
   }, []);
-
+  console.log(detailsFetch.dataValue);
   return (
     <div>
       {

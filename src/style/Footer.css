@@ -5,3 +5,16 @@
   position: fixed;
   width: 100%;
 }
+
+.carousel-inner {
+  display: inline-block;
+  width: 100%;
+}
+
+img {
+  height: 100%;
+}
+
+.carousel-item {
+  width: 40%;
+}
