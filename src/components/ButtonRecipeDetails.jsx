@@ -11,7 +11,7 @@ function ButtonRecipeDetails() {
 
   function isDone() {
     if (doneRecipes.length > 0) {
-      return JSON.parse(doneRecipes).some((item) => item.id === id);
+      return doneRecipes.some((item) => item.id === id);
     }
     return true;
   }
