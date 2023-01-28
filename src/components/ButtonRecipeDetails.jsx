@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import LocalStorageProvider from '../context/LocalStorageProvider';
+import LocalStorageContext from '../context/LocalStorageContext';
 import '../style/ButtonRecipeDetails.css';
 
 function ButtonRecipeDetails() {
   const { id } = useParams();
   const {
     values: { doneRecipes, favoriteRecipes, inProgressRecipes },
-  } = useContext(LocalStorageProvider);
+  } = useContext(LocalStorageContext);
 
   function isDone() {
     if (doneRecipes.length > 0) {
@@ -15,6 +15,8 @@ function ButtonRecipeDetails() {
     }
     return true;
   }
+
+  console.log('usar nos próximos requesitos', favoriteRecipes, inProgressRecipes);
 
   return (
     <div>
