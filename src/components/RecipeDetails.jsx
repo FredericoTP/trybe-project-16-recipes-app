@@ -4,8 +4,8 @@ import MainContext from '../context/MainContext';
 import Carousel from './Carousel';
 import ButtonRecipeDetails from './ButtonRecipeDetails';
 import LocalStorageContext from '../context/LocalStorageContext';
-// import favorited from '../images/whiteHeartIcon.svg';
-// import notFavorited from '../images/blackHeartIcon.svg';
+import notFavorited from '../images/whiteHeartIcon.svg';
+import favorited from '../images/blackHeartIcon.svg';
 
 const copy = require('clipboard-copy');
 
@@ -13,6 +13,9 @@ function RecipeDetails() {
   const { functions } = useContext(LocalStorageContext);
   const { detailsFetch } = useContext(MainContext);
   const [isShared, setIsShared] = useState(false);
+
+  const whiteHeart = <img src={ notFavorited } data-testid="favorite-btn" alt="share" />;
+  const blackHeart = <img src={ favorited } data-testid="favorite-btn" alt="share" />;
 
   function getItens() {
     let entries = [];
@@ -51,8 +54,7 @@ function RecipeDetails() {
               <img src={ shareIcon } alt="share" />
             </button>
             <button
-              data-testid="favorite-btn"
-              onClick={ () => functions.addFavorite({
+              onClick={ () => functions.handleFavorite({
                 id: item.idMeal,
                 type: 'meal',
                 nationality: item.strArea,
@@ -62,7 +64,7 @@ function RecipeDetails() {
                 image: item.strMealThumb,
               }) }
             >
-              asd
+              {functions.isFavoriteRecipe(item.idMeal) ? blackHeart : whiteHeart}
             </button>
             {
               isShared && <small>Link copied!</small>
@@ -108,8 +110,7 @@ function RecipeDetails() {
               <img src={ shareIcon } alt="share" />
             </button>
             <button
-              data-testid="favorite-btn"
-              onClick={ () => functions.addFavorite({
+              onClick={ () => functions.handleFavorite({
                 id: item.idDrink,
                 type: 'drink',
                 nationality: (item.strArea ? item.strArea : ''),
@@ -119,7 +120,7 @@ function RecipeDetails() {
                 image: item.strDrinkThumb,
               }) }
             >
-              asd
+              {functions.isFavoriteRecipe(item.idDrink) ? blackHeart : whiteHeart}
             </button>
             {
               isShared && <small>Link copied!</small>
