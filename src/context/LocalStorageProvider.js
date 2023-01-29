@@ -10,17 +10,21 @@ function LocalStorageProvider({ children }) {
     setInProgressRecipes,
   ] = useLocalStorage('inProgressRecipes', {});
 
-  function addFavorite({ id, type, nationality, category, alcoholicOrNot, name, image }) {
-    const object = {
-      id,
-      type,
-      nationality,
-      category,
-      alcoholicOrNot,
-      name,
-      image,
-    };
-    setFavoriteRecipes([...favoriteRecipes, object]);
+  function addFavorite(newRecipe) {
+    setFavoriteRecipes([...favoriteRecipes, newRecipe]);
+  }
+
+  function removeFavorite(recipeId) {
+    setFavoriteRecipes(favoriteRecipes.filter((recipe) => recipe.id !== recipeId));
+  }
+
+  function isFavoriteRecipe(recipeId) {
+    return favoriteRecipes.some((recipe) => recipe.id === recipeId);
+  }
+
+  function handleFavorite(newRecipe) {
+    if (isFavoriteRecipe(newRecipe.id)) return removeFavorite(newRecipe.id);
+    addFavorite(newRecipe);
   }
 
   const localStorage = useMemo(() => ({
@@ -36,6 +40,9 @@ function LocalStorageProvider({ children }) {
     },
     functions: {
       addFavorite,
+      removeFavorite,
+      isFavoriteRecipe,
+      handleFavorite,
     },
   }), [doneRecipes, favoriteRecipes, inProgressRecipes]);
 
