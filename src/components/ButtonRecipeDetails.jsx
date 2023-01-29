@@ -12,10 +12,7 @@ function ButtonRecipeDetails() {
   const { detailsFetch } = useContext(MainContext);
 
   function isDone() {
-    if (doneRecipes) {
-      return !doneRecipes.some((item) => item.id === id);
-    }
-    return true;
+    return doneRecipes ? !doneRecipes.some((item) => item.id === id) : true;
   }
 
   function inProgress() {
