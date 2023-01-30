@@ -5,8 +5,6 @@ import MainContext from '../context/MainContext';
 import shareIcon from '../images/shareIcon.svg';
 import blackHeart from '../images/blackHeartIcon.svg';
 
-const copy = require('clipboard-copy');
-
 function ListFavorites() {
   const { values, functions } = useContext(LocalStorageContext);
   const { doneFilter } = useContext(MainContext);
@@ -17,9 +15,9 @@ function ListFavorites() {
 
   function handleClickShare(type, id, position) {
     if (type === 'meal') {
-      copy(`http://localhost:3000/meals/${id}`);
+      navigator.clipboard.writeText(`http://localhost:3000/meals/${id}`);
     } else {
-      copy(`http://localhost:3000/drinks/${id}`);
+      navigator.clipboard.writeText(`http://localhost:3000/drinks/${id}`);
     }
 
     const updatedCheckedState = isShared

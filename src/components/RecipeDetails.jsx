@@ -7,8 +7,6 @@ import LocalStorageContext from '../context/LocalStorageContext';
 import notFavorited from '../images/whiteHeartIcon.svg';
 import favorited from '../images/blackHeartIcon.svg';
 
-const copy = require('clipboard-copy');
-
 function RecipeDetails() {
   const { functions } = useContext(LocalStorageContext);
   const { detailsFetch } = useContext(MainContext);
@@ -38,7 +36,7 @@ function RecipeDetails() {
   }
 
   function handleClickShare() {
-    copy(window.location.href);
+    navigator.clipboard.writeText(window.location.href);
     setIsShared(true);
   }
 
