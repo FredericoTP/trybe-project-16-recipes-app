@@ -10,7 +10,7 @@ function Login() {
     <div>
       <input
         data-testid="email-input"
-        type="text"
+        type="email"
         placeholder="Email"
         value={ emailInput.value }
         onChange={ emailInput.handleChange }
