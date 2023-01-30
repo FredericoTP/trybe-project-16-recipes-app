@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import MainContext from './MainContext';
 import useInput from '../hook/useInput';
 import useFetch from '../hook/useFetch';
 
 function MainProvider({ children }) {
+  const [doneFilter, setDoneFilter] = useState('');
   const detailsFetch = useFetch();
   const categoryFetch = useFetch();
   const { dataValue, error, fetchApi } = useFetch();
@@ -66,6 +67,8 @@ function MainProvider({ children }) {
     fetchApi,
     handleClickSearch,
     detailsFetch,
+    doneFilter,
+    setDoneFilter,
   }), [searchInput, radioInput]);
 
   return (

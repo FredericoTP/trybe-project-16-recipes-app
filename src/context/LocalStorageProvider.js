@@ -5,7 +5,8 @@ import useLocalStorage from '../hook/useLocalStorage';
 
 function LocalStorageProvider({ children }) {
   const [doneRecipes, setDoneRecipes] = useLocalStorage('doneRecipes', []);
-  const [favoriteRecipes, setFavoriteRecipes] = useLocalStorage('favoriteRecipes', []);
+  const [favoriteRecipes,
+    setFavoriteRecipes] = useLocalStorage('favoriteRecipes', []);
   const [inProgressRecipes,
     setInProgressRecipes,
   ] = useLocalStorage('inProgressRecipes', {});
