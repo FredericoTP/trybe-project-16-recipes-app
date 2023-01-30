@@ -3,10 +3,11 @@
   width: 100%;
 }
 
-img {
-  height: 100%;
+.carosel img, h3 {
+  margin: 0 auto;
+  width: 75%;
 }
 
-.carousel-item {
-  width: 40%;
+.carosel {
+  width: 45%;
 }
