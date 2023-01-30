@@ -9,9 +9,6 @@ import drinks from '../../cypress/mocks/drinks';
 import drinkCategories from '../../cypress/mocks/drinkCategories';
 
 describe('Testes do componente Footer', () => {
-  const userEmail = 'user@email.com';
-  const userPassword = 'supersecurepassword';
-
   test('se os ícones são carregados corretamente na tela e se direcionam para o caminho carreto', async () => {
     act(() => {
       global.fetch = jest.fn().mockResolvedValue({
