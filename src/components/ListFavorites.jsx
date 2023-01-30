@@ -13,8 +13,6 @@ function ListFavorites() {
   const { favoriteRecipes } = values;
   const { removeFavorite } = functions;
 
-  console.log(values);
-
   const [isShared, setIsShared] = useState(new Array(favoriteRecipes.length).fill(false));
 
   function handleClickShare(type, id, position) {
