@@ -14,7 +14,7 @@ function Recipes() {
         dataValue.meals.slice(0, NUMBER12).map((meal, index) => {
           const { strMeal, strMealThumb, idMeal } = meal;
           return (
-            <div key={ strMeal } data-testid={ `${index}-recipe-card` }>
+            <div key={ `${strMeal}${index}` } data-testid={ `${index}-recipe-card` }>
               <Link to={ `/meals/${idMeal}` }>
                 <h2 data-testid={ `${index}-card-name` }>{strMeal}</h2>
                 <img
@@ -31,7 +31,7 @@ function Recipes() {
         filterFetch.dataValue.meals.slice(0, NUMBER12).map((meal, index) => {
           const { strMeal, strMealThumb, idMeal } = meal;
           return (
-            <div key={ strMeal } data-testid={ `${index}-recipe-card` }>
+            <div key={ `${strMeal}${index}` } data-testid={ `${index}-recipe-card` }>
               <Link to={ `/meals/${idMeal}` }>
                 <h2 data-testid={ `${index}-card-name` }>{strMeal}</h2>
                 <img
@@ -48,7 +48,7 @@ function Recipes() {
         dataValue.drinks.slice(0, NUMBER12).map((meal, index) => {
           const { strDrink, strDrinkThumb, idDrink } = meal;
           return (
-            <div key={ strDrink } data-testid={ `${index}-recipe-card` }>
+            <div key={ `${strDrink}${index}` } data-testid={ `${index}-recipe-card` }>
               <Link to={ `/drinks/${idDrink}` }>
                 <h2 data-testid={ `${index}-card-name` }>{strDrink}</h2>
                 <img
@@ -65,7 +65,7 @@ function Recipes() {
         filterFetch.dataValue.drinks.slice(0, NUMBER12).map((meal, index) => {
           const { strDrink, strDrinkThumb, idDrink } = meal;
           return (
-            <div key={ strDrink } data-testid={ `${index}-recipe-card` }>
+            <div key={ `${strDrink}${index}` } data-testid={ `${index}-recipe-card` }>
               <Link to={ `/drinks/${idDrink}` }>
                 <h2 data-testid={ `${index}-card-name` }>{strDrink}</h2>
                 <img

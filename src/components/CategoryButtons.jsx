@@ -28,10 +28,10 @@ function CategoryButtons() {
         All
       </button>
       {dataValue.meals && (
-        dataValue.meals.slice(0, NUMBER5).map((meal) => {
+        dataValue.meals.slice(0, NUMBER5).map((meal, index) => {
           const { strCategory } = meal;
           return (
-            <div key={ strCategory }>
+            <div key={ `${strCategory}${index}` }>
               <button
                 data-testid={ `${strCategory}-category-filter` }
                 onClick={
@@ -45,10 +45,10 @@ function CategoryButtons() {
         })
       ) }
       {dataValue.drinks && (
-        dataValue.drinks.slice(0, NUMBER5).map((drinks) => {
+        dataValue.drinks.slice(0, NUMBER5).map((drinks, index) => {
           const { strCategory } = drinks;
           return (
-            <div key={ strCategory }>
+            <div key={ `${strCategory}${index}` }>
               <button
                 data-testid={ `${strCategory}-category-filter` }
                 onClick={
