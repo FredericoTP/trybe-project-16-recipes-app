@@ -4,8 +4,6 @@ import LocalStorageContext from '../context/LocalStorageContext';
 import MainContext from '../context/MainContext';
 import shareIcon from '../images/shareIcon.svg';
 
-const copy = require('clipboard-copy');
-
 function RecipesDone() {
   const { values } = useContext(LocalStorageContext);
   const { doneFilter } = useContext(MainContext);
@@ -14,9 +12,9 @@ function RecipesDone() {
 
   function handleClickShare(type, id, position) {
     if (type === 'meal') {
-      copy(`http://localhost:3000/meals/${id}`);
+      navigator.clipboard.writeText(`http://localhost:3000/meals/${id}`);
     } else {
-      copy(`http://localhost:3000/drinks/${id}`);
+      navigator.clipboard.writeText(`http://localhost:3000/drinks/${id}`);
     }
 
     const updatedCheckedState = isShared

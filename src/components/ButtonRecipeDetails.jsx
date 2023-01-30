@@ -53,6 +53,9 @@ function ButtonRecipeDetails() {
           </Link>
         )
       }
+      {
+        (!isDone()) && <p data-testid="recipe-finished">Recipe Finished</p>
+      }
     </div>
   );
 }
