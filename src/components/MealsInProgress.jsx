@@ -8,7 +8,6 @@ import favorited from '../images/blackHeartIcon.svg';
 import '../style/RecipeInProgress.css';
 
 const copy = require('clipboard-copy');
-const moment = require('moment');
 
 function MealsInProgress() {
   const { functions } = useContext(LocalStorageContext);
@@ -53,13 +52,7 @@ function MealsInProgress() {
     const recipeTags = recipe.strTags ? recipe.strTags.split(',') : [];
     const tags = recipeTags.length === 0 ? [] : recipeTags;
 
-    // const date = new Date();
-    // const day = date.getDate();
-    // const month = date.getMonth() + 1;
-    // const year = date.getFullYear();
-    // const doneDate = `${day}/${month}/${year}`;
-
-    const doneDate = moment().format();
+    const doneDate = new Date().toISOString();
 
     const doneRecipe = {
       id: recipe.idMeal,
