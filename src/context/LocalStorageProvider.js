@@ -108,6 +108,7 @@ function LocalStorageProvider({ children }) {
       isAddedIngredient,
       isDoneRecipe,
       addDoneRecipe,
+      removeFavorite,
     },
   }), [doneRecipes, favoriteRecipes, inProgressRecipes]);
 
