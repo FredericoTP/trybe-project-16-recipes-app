@@ -9,7 +9,7 @@ function LocalStorageProvider({ children }) {
     setFavoriteRecipes] = useLocalStorage('favoriteRecipes', []);
   const [inProgressRecipes,
     setInProgressRecipes,
-  ] = useLocalStorage('inProgressRecipes', {});
+  ] = useLocalStorage('inProgressRecipes', { drinks: {}, meals: {} });
 
   function addFavorite(newRecipe) {
     setFavoriteRecipes([...favoriteRecipes, newRecipe]);
@@ -28,6 +28,66 @@ function LocalStorageProvider({ children }) {
     addFavorite(newRecipe);
   }
 
+  function addInProgress(type, recipeId) {
+    if (Object.keys(inProgressRecipes[type]).includes(recipeId)) return;
+    const progress = {
+      ...inProgressRecipes,
+      [type]: { ...inProgressRecipes[type], [recipeId]: [] },
+    };
+    setInProgressRecipes(progress);
+  }
+
+  function removeInProgress(type, recipeId) {
+    const removeId = ({ [recipeId]: removed, ...rest }) => (rest);
+    const progress = {
+      ...inProgressRecipes,
+      [type]: removeId(inProgressRecipes[type]),
+    };
+    setInProgressRecipes(progress);
+  }
+
+  function addIngredient(type, recipeId, ingredient) {
+    const progress = {
+      ...inProgressRecipes,
+      [type]: {
+        ...inProgressRecipes[type],
+        [recipeId]: [...inProgressRecipes[type][recipeId], ingredient],
+      },
+    };
+    setInProgressRecipes(progress);
+  }
+
+  function removeIngredient(type, recipeId, ingredient) {
+    const progress = {
+      ...inProgressRecipes,
+      [type]: {
+        ...inProgressRecipes[type],
+        [recipeId]: inProgressRecipes[type][recipeId].filter((ing) => ing !== ingredient),
+      },
+    };
+    setInProgressRecipes(progress);
+  }
+
+  function isAddedIngredient(type, recipeId, ingredient) {
+    if (!inProgressRecipes[type][recipeId]) return false;
+    return inProgressRecipes[type][recipeId].includes(ingredient);
+  }
+
+  function handleIngredient(type, recipeId, ingredient) {
+    if (isAddedIngredient(type, recipeId, ingredient)) {
+      return removeIngredient(type, recipeId, ingredient);
+    }
+    addIngredient(type, recipeId, ingredient);
+  }
+
+  function isDoneRecipe(type, recipeId, recipe) {
+    return recipe.every((ingredient) => isAddedIngredient(type, recipeId, ingredient));
+  }
+
+  function addDoneRecipe(doneRecipe) {
+    setDoneRecipes([...doneRecipes, doneRecipe]);
+  }
+
   const localStorage = useMemo(() => ({
     values: {
       doneRecipes,
@@ -40,10 +100,14 @@ function LocalStorageProvider({ children }) {
       setInProgressRecipes,
     },
     functions: {
-      addFavorite,
-      removeFavorite,
       isFavoriteRecipe,
       handleFavorite,
+      addInProgress,
+      removeInProgress,
+      handleIngredient,
+      isAddedIngredient,
+      isDoneRecipe,
+      addDoneRecipe,
     },
   }), [doneRecipes, favoriteRecipes, inProgressRecipes]);
 

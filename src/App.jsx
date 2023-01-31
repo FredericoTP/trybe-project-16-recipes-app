@@ -13,7 +13,6 @@ import Drinks from './pages/Drinks';
 import MealsDetails from './pages/MealsDetails';
 import DrinksDetails from './pages/DrinksDetails';
 import LocalStorageProvider from './context/LocalStorageProvider';
-import DrinksInProgress from './pages/DrinksInProgress';
 
 function App() {
   return (
@@ -32,7 +31,7 @@ function App() {
             <Route
               exact
               path="/drinks/:id/in-progress"
-              render={ () => <DrinksInProgress /> }
+              render={ () => <RecipeInProgress /> }
             />
             <Route exact path="/meals/:id" render={ () => <MealsDetails /> } />
             <Route exatc path="/drinks/:id" render={ () => <DrinksDetails /> } />
