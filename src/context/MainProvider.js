@@ -11,6 +11,7 @@ function MainProvider({ children }) {
   const categoryFetch = useFetch();
   const { dataValue, error, fetchApi } = useFetch();
   const filterFetch = useFetch();
+  const carouselFetch = useFetch();
   const searchInput = useInput('');
   const radioInput = useInput('ingredient');
   const history = useHistory();
@@ -25,11 +26,6 @@ function MainProvider({ children }) {
 
   function searchValidation() {
     switch (radioInput.value) {
-    case 'ingredient':
-      if (pathname === '/meals') {
-        return IMEALS;
-      }
-      return IDRINKS;
     case 'name':
       if (pathname === '/meals') {
         return NMEALS;
@@ -49,12 +45,16 @@ function MainProvider({ children }) {
         ) : (FDRINKS)
       );
     default:
-      return 'asd';
+      if (pathname === '/meals') {
+        return IMEALS;
+      }
+      return IDRINKS;
     }
   }
 
   function handleClickSearch() {
     fetchApi(searchValidation());
+    searchInput.setValue('');
   }
 
   const valueSearch = useMemo(() => ({
@@ -69,6 +69,7 @@ function MainProvider({ children }) {
     detailsFetch,
     doneFilter,
     setDoneFilter,
+    carouselFetch,
   }), [searchInput, radioInput]);
 
   return (

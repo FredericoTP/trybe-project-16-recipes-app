@@ -71,6 +71,7 @@ function RecipesDone() {
                   ))
                 }
                 <button
+                  data-testid="btn-share-done"
                   type="button"
                   onClick={ () => handleClickShare(item.type, item.id, index) }
                 >
