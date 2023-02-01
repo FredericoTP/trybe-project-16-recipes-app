@@ -4,6 +4,7 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './style/reset.css';
 
 ReactDOM
   .createRoot(document.getElementById('root'))
