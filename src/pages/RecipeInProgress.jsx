@@ -4,6 +4,7 @@ import MainContext from '../context/MainContext';
 import LocalStorageContext from '../context/LocalStorageContext';
 import DrinksInProgress from '../components/DrinksInProgress';
 import MealsInProgress from '../components/MealsInProgress';
+import Loading from '../components/Loading';
 
 function RecipeInProgress() {
   const { id } = useParams();
@@ -28,7 +29,7 @@ function RecipeInProgress() {
   if (detailsFetch.loading) {
     return (
       <div>
-        <p>Loading...</p>
+        <Loading />
       </div>
     );
   }

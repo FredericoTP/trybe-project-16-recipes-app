@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Recipes from '../components/Recipes';
 import MainContext from '../context/MainContext';
+import Loading from '../components/Loading';
 
 function Drinks() {
   const { loading, fetchApi, dataValue, categoryFetch } = useContext(MainContext);
@@ -21,7 +22,7 @@ function Drinks() {
     return (
       <div>
         <Header />
-        <p>Loading...</p>
+        <Loading />
         <Footer />
       </div>
     );

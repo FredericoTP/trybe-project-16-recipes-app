@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import MainContext from '../context/MainContext';
 import RecipeDetails from '../components/RecipeDetails';
+import Loading from '../components/Loading';
 
 function DrinksDetails() {
   const { id } = useParams();
@@ -18,7 +19,7 @@ function DrinksDetails() {
   if (carouselFetch.loadgin || detailsFetch.loading) {
     return (
       <div>
-        <p>Loading...</p>
+        <Loading />
       </div>
     );
   }
