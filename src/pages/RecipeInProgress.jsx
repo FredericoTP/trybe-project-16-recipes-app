@@ -4,6 +4,7 @@ import MainContext from '../context/MainContext';
 import LocalStorageContext from '../context/LocalStorageContext';
 import DrinksInProgress from '../components/DrinksInProgress';
 import MealsInProgress from '../components/MealsInProgress';
+import Loading from '../components/Loading';
 
 function RecipeInProgress() {
   const { id } = useParams();
@@ -24,6 +25,14 @@ function RecipeInProgress() {
     fetchDetails();
     functions.addInProgress(type, id);
   }, []);
+
+  if (detailsFetch.loading) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
 
   return <div>{type === 'meals' ? <MealsInProgress /> : <DrinksInProgress />}</div>;
 }

@@ -3,9 +3,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Recipes from '../components/Recipes';
 import MainContext from '../context/MainContext';
+import Loading from '../components/Loading';
 
 function Meals() {
-  const { fetchApi, dataValue, categoryFetch } = useContext(MainContext);
+  const { loading, fetchApi, dataValue, categoryFetch } = useContext(MainContext);
 
   useEffect(() => {
     const callApi = async () => {
@@ -16,6 +17,16 @@ function Meals() {
 
     callApi();
   }, []);
+
+  if (loading || categoryFetch.loading) {
+    return (
+      <div>
+        <Header />
+        <Loading />
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div>

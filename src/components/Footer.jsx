@@ -11,6 +11,7 @@ function Footer() {
     >
       <Link to="/drinks">
         <img
+          className="footer-drinks"
           data-testid="drinks-bottom-btn"
           src={ imgDrink }
           alt="ToDrink"
@@ -18,6 +19,7 @@ function Footer() {
       </Link>
       <Link to="/meals">
         <img
+          className="footer-meals"
           data-testid="meals-bottom-btn"
           src={ imgMeal }
           alt="ToMeal"
