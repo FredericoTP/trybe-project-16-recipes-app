@@ -1,0 +1,50 @@
+.searchbar-container {
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 10px;
+  width: 90%;
+}
+
+.searchbar-input-search {
+  margin: 0 0 10px;
+  width: 100%;
+}
+
+.searchbar-radio-container {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 15px;
+  width: 90%;
+}
+
+.search-radio {
+  margin: 3px 3px 0 0;
+}
+
+.font-size-label {
+  font-size: 12px;
+}
+
+.searchbar-btn {
+  background-color: rgb(68, 250, 150);
+  border: 0;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+  width: 90%;
+}
+
+@media screen and ( min-width : 700px ) {
+
+  .searchbar-container {
+    width: 60%;
+  }
+
+  .font-size-label {
+    font-size: 15px;
+  }
+
+}
