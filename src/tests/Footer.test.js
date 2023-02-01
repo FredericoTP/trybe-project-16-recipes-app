@@ -3,10 +3,10 @@ import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 import { renderWithRouter } from './helpers/renderWith';
 import App from '../App';
-import meals from '../../cypress/mocks/meals';
-import mealCategories from '../../cypress/mocks/mealCategories';
-import drinks from '../../cypress/mocks/drinks';
-import drinkCategories from '../../cypress/mocks/drinkCategories';
+import meals from './mocks/meals';
+import mealCategories from './mocks/mealCategories';
+import drinks from './mocks/drinks';
+import drinkCategories from './mocks/drinkCategories';
 
 describe('Testes do componente Footer', () => {
   test('se os ícones são carregados corretamente na tela e se direcionam para o caminho carreto', async () => {

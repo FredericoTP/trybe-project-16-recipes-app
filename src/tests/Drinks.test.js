@@ -3,9 +3,9 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderWithRouter } from './helpers/renderWith';
 import App from '../App';
-import drinks from '../../cypress/mocks/drinks';
-import drinkCategories from '../../cypress/mocks/drinkCategories';
-import cocktailDrinks from '../../cypress/mocks/cocktailDrinks';
+import drinks from './mocks/drinks';
+import drinkCategories from './mocks/drinkCategories';
+import cocktailDrinks from './mocks/cocktailDrinks';
 
 describe('Teste da rota "/drinks"', () => {
   const CARDNAME0 = '0-card-name';
