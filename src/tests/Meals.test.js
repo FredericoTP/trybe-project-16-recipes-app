@@ -3,9 +3,9 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderWithRouter } from './helpers/renderWith';
 import App from '../App';
-import meals from '../../cypress/mocks/meals';
-import mealCategories from '../../cypress/mocks/mealCategories';
-import beefMeals from '../../cypress/mocks/beefMeals';
+import meals from './mocks/meals';
+import mealCategories from './mocks/mealCategories';
+import beefMeals from './mocks/beefMeals';
 
 describe('Teste da rota "/meals"', () => {
   test('Verifica se os itens são renderizados na tela', async () => {

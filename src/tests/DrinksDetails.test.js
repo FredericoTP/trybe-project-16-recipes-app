@@ -3,8 +3,8 @@ import { act } from 'react-dom/test-utils';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 import { renderWithRouter } from './helpers/renderWith';
-import meals from '../../cypress/mocks/meals';
-import oneDrinkId15997 from '../../cypress/mocks/oneDrinkId15997';
+import meals from './mocks/meals';
+import oneDrinkId15997 from './mocks/oneDrinkId15997';
 
 describe('Teste da rota "/meals-details"', () => {
   const PATHNAME = '/drinks/15997';

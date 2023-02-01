@@ -3,7 +3,7 @@ import { act } from 'react-dom/test-utils';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 import { renderWithRouter } from './helpers/renderWith';
-import oneDrink from '../../cypress/mocks/oneDrink';
+import oneDrink from './mocks/oneDrink';
 
 describe('Teste MealsInProgress', () => {
   const MEALSPATH = '/drinks/178319/in-progress';

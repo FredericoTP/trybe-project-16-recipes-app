@@ -17,8 +17,6 @@
     "react-slick": "^0.29.0"
   },
   "scripts": {
-    "cy": "env CY_CLI=true cypress run",
-    "cy:open": "cypress open --e2e --browser chrome",
     "start": "env ESLINT_NO_DEV_ERRORS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,8 +45,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "clipboardy": "^2.3.0",
-    "cypress": "^10.11.0",
-    "cypress-multi-reporters": "^1.6.2",
     "eslint-config-trybe-frontend": "1.5.0",
     "fs-extra": "^10.1.0",
     "mocha": "^10.2.0",
