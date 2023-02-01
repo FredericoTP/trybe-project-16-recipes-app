@@ -14,6 +14,14 @@ function MealsDetails() {
     fetchDetails();
   }, []);
 
+  if (carouselFetch.loadgin || detailsFetch.loading) {
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <div>
       {

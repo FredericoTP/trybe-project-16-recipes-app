@@ -9,7 +9,7 @@ function MainProvider({ children }) {
   const [doneFilter, setDoneFilter] = useState('');
   const detailsFetch = useFetch();
   const categoryFetch = useFetch();
-  const { dataValue, error, fetchApi } = useFetch();
+  const { loading, dataValue, error, fetchApi } = useFetch();
   const filterFetch = useFetch();
   const carouselFetch = useFetch();
   const searchInput = useInput('');
@@ -62,6 +62,7 @@ function MainProvider({ children }) {
     radioInput,
     dataValue,
     error,
+    loading,
     categoryFetch,
     filterFetch,
     fetchApi,

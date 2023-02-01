@@ -25,6 +25,14 @@ function RecipeInProgress() {
     functions.addInProgress(type, id);
   }, []);
 
+  if (detailsFetch.loading) {
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
   return <div>{type === 'meals' ? <MealsInProgress /> : <DrinksInProgress />}</div>;
 }
 

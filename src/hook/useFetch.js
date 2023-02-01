@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 function useFetch() {
   const [dataValue, setDataValue] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   function redirect(data) {
@@ -19,6 +20,7 @@ function useFetch() {
   }
 
   const fetchApi = async (url) => {
+    setLoading(true);
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -26,22 +28,28 @@ function useFetch() {
       setDataValue(data);
     } catch (e) {
       setError(e);
+    } finally {
+      setLoading(false);
     }
   };
 
   const fetchApiFiltered = async (url) => {
+    setLoading(true);
     try {
       const response = await fetch(url);
       const data = await response.json();
       setDataValue(data);
     } catch (e) {
       setError(e);
+    } finally {
+      setLoading(false);
     }
   };
 
   return {
     dataValue,
     error,
+    loading,
     fetchApi,
     setDataValue,
     fetchApiFiltered,

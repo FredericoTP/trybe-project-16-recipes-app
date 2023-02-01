@@ -5,7 +5,7 @@ import Recipes from '../components/Recipes';
 import MainContext from '../context/MainContext';
 
 function Drinks() {
-  const { fetchApi, dataValue, categoryFetch } = useContext(MainContext);
+  const { loading, fetchApi, dataValue, categoryFetch } = useContext(MainContext);
 
   useEffect(() => {
     const callApi = async () => {
@@ -16,6 +16,16 @@ function Drinks() {
 
     callApi();
   }, []);
+
+  if (loading || categoryFetch.loading) {
+    return (
+      <div>
+        <Header />
+        <p>Loading...</p>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div>
