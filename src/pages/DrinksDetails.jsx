@@ -16,7 +16,7 @@ function DrinksDetails() {
     fetchDetails();
   }, []);
 
-  if (carouselFetch.loadgin || detailsFetch.loading) {
+  if (carouselFetch.loading || detailsFetch.loading) {
     return (
       <div>
         <Loading />

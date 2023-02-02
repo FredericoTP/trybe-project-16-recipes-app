@@ -27,10 +27,8 @@ function ButtonRecipeDetails() {
     return false;
   }
 
-  // favoriteRecipes
-
   return (
-    <div>
+    <div className="recipe-details-container">
       {
         (detailsFetch.dataValue.meals && isDone()) && (
           <Link

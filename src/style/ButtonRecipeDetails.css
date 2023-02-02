@@ -1,5 +1,17 @@
-.btn-recipe-details {
+.recipe-details-container {
+  background-color: rgb(68, 250, 150);
   bottom: 0;
+  display: flex;
+  justify-content: center;
   left: 0;
   position: fixed;
+  width: 100%;
+}
+
+.btn-recipe-details {
+  color: black;
+  font-family: Poppins , sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
 }
