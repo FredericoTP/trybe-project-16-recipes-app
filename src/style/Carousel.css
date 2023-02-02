@@ -15,6 +15,11 @@
   width: 45%;
 }
 
+.carousel-link {
+  color: black;
+  text-decoration: none;
+}
+
 .carosel {
   width: 45%;
 }

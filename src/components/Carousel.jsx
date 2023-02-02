@@ -19,14 +19,14 @@ export default function Carousel() {
     carouselFetch.dataValue.drinks ? (
       <Slider { ...settings }>
         {
-          carouselFetch.dataValue.drinks.splice(0, 6).map((item, index) => (
+          carouselFetch.dataValue.drinks.map((item, index) => (
             <div
               key={ index }
               className="carosel"
               data-testid={ `${index}-recommendation-card` }
             >
               <img src={ item.strDrinkThumb } alt="drink" />
-              <Link to={ `/drinks/${item.idDrink}` }>
+              <Link className="carousel-link" to={ `/drinks/${item.idDrink}` }>
                 <h3
                   data-testid={ `${index}-recommendation-title` }
                 >
@@ -40,14 +40,14 @@ export default function Carousel() {
     ) : carouselFetch.dataValue.meals && (
       <Slider { ...settings }>
         {
-          carouselFetch.dataValue.meals.splice(0, 6).map((item, index) => (
+          carouselFetch.dataValue.meals.map((item, index) => (
             <div
               key={ index }
               className="carosel"
               data-testid={ `${index}-recommendation-card` }
             >
               <img src={ item.strMealThumb } alt="drink" />
-              <Link to={ `/meals/${item.idMeal}` }>
+              <Link className="carousel-link" to={ `/meals/${item.idMeal}` }>
                 <h3
                   data-testid={ `${index}-recommendation-title` }
                 >
