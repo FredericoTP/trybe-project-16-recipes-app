@@ -7,7 +7,7 @@ export default function Carousel() {
   const { carouselFetch } = useContext(MainContext);
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 200,
     slidesToShow: 2,
     slidesToScroll: 2,

@@ -26,6 +26,10 @@
   width: 32px;
 }
 
+.categorybtn-container button:hover {
+  background-color: honeydew;
+}
+
 @media screen and ( min-width : 360px ) {
 
   .categorybtn-container button {
