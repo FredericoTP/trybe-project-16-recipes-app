@@ -1,4 +1,5 @@
 {
+  "homepage": "http://fredericotp.github.io/trybe-project-16-recipes-app",
   "name": "recipes-app-test",
   "version": "1.0.0",
   "private": true,
@@ -18,6 +19,8 @@
   },
   "scripts": {
     "start": "env ESLINT_NO_DEV_ERRORS=true react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-coverage": "react-scripts test --coverage --watchAll=false",
@@ -47,6 +50,7 @@
     "clipboardy": "^2.3.0",
     "eslint-config-trybe-frontend": "1.5.0",
     "fs-extra": "^10.1.0",
+    "gh-pages": "^5.0.0",
     "mocha": "^10.2.0",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.2",
