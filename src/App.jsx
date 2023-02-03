@@ -13,6 +13,7 @@ import Drinks from './pages/Drinks';
 import MealsDetails from './pages/MealsDetails';
 import DrinksDetails from './pages/DrinksDetails';
 import LocalStorageProvider from './context/LocalStorageProvider';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -20,9 +21,6 @@ function App() {
       <LoginProvider>
         <MainProvider>
           <Switch>
-            <Route exact path="/" component={ Login } />
-            <Route exact path="/meals" render={ () => <Meals /> } />
-            <Route exact path="/drinks" render={ () => <Drinks /> } />
             <Route
               exact
               path="/meals/:id/in-progress"
@@ -38,6 +36,10 @@ function App() {
             <Route exact path="/profile" component={ Profile } />
             <Route exact path="/done-recipes" component={ DoneRecipes } />
             <Route exact path="/favorite-recipes" component={ FavoriteRecipes } />
+            <Route exact path="/drinks" render={ () => <Drinks /> } />
+            <Route exact path="/meals" render={ () => <Meals /> } />
+            <Route exact path="/" component={ Login } />
+            <Route exact path="*" component={ NotFound } />
           </Switch>
         </MainProvider>
       </LoginProvider>

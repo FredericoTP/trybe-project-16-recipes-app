@@ -1,0 +1,32 @@
+.notfound-container {
+  background-color: honeydew;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.notfound-link {
+  background-color: white;
+  text-decoration: none;
+}
+
+.notfound-image {
+  margin: auto;
+  width: 250px;
+}
+
+.notfound-title {
+  color: rgb(148, 0, 86);
+  font-family: Poppins , sans-serif;
+  text-align: center;
+}
+
+@media screen and ( min-width : 800px ) {
+
+  .notfound-image {
+    margin: auto;
+    width: 350px;
+  }
+}
