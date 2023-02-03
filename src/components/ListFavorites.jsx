@@ -32,7 +32,8 @@ function ListFavorites() {
       {
         favoriteRecipes.length > 0 && (
           favoriteRecipes
-            .filter((item) => item.type.includes(doneFilter)).map((item, index) => (
+            .filter((item) => item.type.includes(doneFilter))
+            .map((item, index) => (
               <div className="listfavorites-recipe" key={ `${item.name}${index}` }>
                 <Link
                   to={

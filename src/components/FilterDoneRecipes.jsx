@@ -28,7 +28,7 @@ function FilterDoneRecipes() {
       <button
         className="filterdone-btn"
         data-testid="filter-by-drink-btn"
-        onClick={ () => setDoneFilter('drink') }
+        onClick={ () => setDoneFilter('drin') }
       >
         <img src={ imgDrink } alt="drink" />
         Drinks
