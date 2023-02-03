@@ -4,6 +4,7 @@ import LocalStorageContext from '../context/LocalStorageContext';
 import MainContext from '../context/MainContext';
 import shareIcon from '../images/shareIcon.svg';
 import blackHeart from '../images/blackHeartIcon.svg';
+import '../style/ListFavorites.css';
 
 function ListFavorites() {
   const { values, functions } = useContext(LocalStorageContext);
@@ -27,28 +28,35 @@ function ListFavorites() {
   }
 
   return (
-    <div>
+    <div className="listfavorites-container">
       {
         favoriteRecipes.length > 0 && (
           favoriteRecipes
             .filter((item) => item.type.includes(doneFilter)).map((item, index) => (
-              <div key={ `${item.name}${index}` }>
+              <div className="listfavorites-recipe" key={ `${item.name}${index}` }>
                 <Link
                   to={
                     item.type === 'meal' ? `/meals/${item.id}` : `/drinks/${item.id}`
                   }
                 >
                   <img
+                    className="listfavorites-image"
                     data-testid={ `${index}-horizontal-image` }
                     src={ item.image }
                     alt={ item.name }
                     width="200px"
                   />
-                  <h3 data-testid={ `${index}-horizontal-name` }>{item.name}</h3>
+                  <h3
+                    className="listfavorites-title"
+                    data-testid={ `${index}-horizontal-name` }
+                  >
+                    {item.name}
+                  </h3>
                 </Link>
                 {
                   item.type === 'meal' ? (
                     <h3
+                      className="listfavorites-category"
                       data-testid={ `${index}-horizontal-top-text` }
                     >
                       {`${item.nationality} - ${item.category}`}
@@ -56,34 +64,46 @@ function ListFavorites() {
                     </h3>)
                     : (
                       <h3
+                        className="recipesdone-category"
                         data-testid={ `${index}-horizontal-top-text` }
                       >
                         {item.alcoholicOrNot}
                       </h3>)
                 }
-                <button
-                  type="button"
-                  onClick={ () => removeFavorite(item.id) }
-                >
-                  <img
-                    data-testid={ `${index}-horizontal-favorite-btn` }
-                    src={ blackHeart }
-                    alt="favorite"
-                  />
-                </button>
-                <button
-                  type="button"
-                  onClick={ () => handleClickShare(item.type, item.id, index) }
-                >
-                  <img
-                    data-testid={ `${index}-horizontal-share-btn` }
-                    src={ shareIcon }
-                    alt="share"
-                  />
-                </button>
-                {
-                  isShared[index] && <small>Link copied!</small>
-                }
+                <div className="listfavorites-btn-container">
+                  <div className="listfavorites-btn-share-container">
+                    <button
+                      className="listfavorites-share-btn"
+                      type="button"
+                      onClick={ () => handleClickShare(item.type, item.id, index) }
+                    >
+                      <img
+                        data-testid={ `${index}-horizontal-share-btn` }
+                        src={ shareIcon }
+                        alt="share"
+                      />
+                    </button>
+                    {
+                      isShared[index] && (
+                        <small
+                          className="listfavorites-shered"
+                        >
+                          Link copied!
+                        </small>)
+                    }
+                  </div>
+                  <button
+                    className="listfavorites-fav-btn"
+                    type="button"
+                    onClick={ () => removeFavorite(item.id) }
+                  >
+                    <img
+                      data-testid={ `${index}-horizontal-favorite-btn` }
+                      src={ blackHeart }
+                      alt="favorite"
+                    />
+                  </button>
+                </div>
               </div>
             ))
         )

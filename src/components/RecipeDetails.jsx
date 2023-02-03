@@ -179,7 +179,7 @@ function RecipeDetails() {
                       type: 'Drink',
                       nationality: item.strArea,
                       category: item.strCategory,
-                      alcoholicOrNot: '',
+                      alcoholicOrNot: item.strAlcoholic,
                       name: item.strDrink,
                       image: item.strDrinkThumb,
                     }) }
