@@ -1,5 +1,6 @@
 .filterdone-container {
   display: flex;
+  font-family: Poppins , sans-serif;
   justify-content: space-between;
   margin: 0 auto 20px;
   width: 90%;
