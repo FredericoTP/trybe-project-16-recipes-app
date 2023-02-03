@@ -1,0 +1,51 @@
+.profilecard-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.profile-user {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px auto;
+  width: fit-content;
+}
+
+.profile-btn {
+  align-items: center;
+  background-color: honeydew;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  font-weight: 600;
+  margin: 20px 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.profile-icon-image {
+  margin-right: 20px;
+}
+
+@media screen and ( min-width : 500px ) {
+
+  .profilecard-container {
+    width: 60%;
+  }
+}
+
+@media screen and ( min-width : 800px ) {
+
+  .profilecard-container {
+    width: 40%;
+  }
+}
+
+@media screen and ( min-width : 1280px ) {
+
+  .profilecard-container {
+    width: 20%;
+  }
+}

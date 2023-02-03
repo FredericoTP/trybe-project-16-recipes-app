@@ -1,0 +1,185 @@
+.inprogress-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins , sans-serif;
+}
+
+.inprogress-header {
+  height: 162px;
+  width: 100%;
+}
+
+.inprogress-header-image {
+  filter: brightness(70%);
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.inprogress-header-btn-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: fit-content;
+}
+
+.inprogress-btn-container {
+  display: flex;
+  padding: 5px;
+}
+
+.inprogress-header-btn-share {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 0;
+  border-radius: 100%;
+  margin: 0 5px 0 0;
+  padding: 5px;
+}
+
+.inprogress-header-btn-fav {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 0;
+  border-radius: 100%;
+  margin: 0 0 0 5px;
+  padding: 5px;
+}
+
+.inprogress-header-btn-share img, .inprogress-header-btn-fav img {
+  width: 32px;
+}
+
+
+.inprogress-header-shared {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  font-size: 10px;
+  padding: 5px;
+}
+
+.inprogress-category-container {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  display: flex;
+  left: 10px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+}
+
+.inprogress-category-container h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.inprogress-title-container {
+  border-radius: 10px;
+  display: flex;
+  position: absolute;
+  top: 90px;
+  width: 100%;
+}
+
+.inprogress-title-container h2 {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.inprogress-ingredients-container {
+  border: 2px solid gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  margin: 20px auto 10px;
+  padding: 10px;
+  width: 90%;
+  word-wrap: break-word;
+}
+
+.inprogress-ingredients-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-align: center;
+  width: fit-content;
+}
+
+.inprogress-checkbox-container {
+  align-items: center;
+  display: flex;
+  padding: 5px 0;
+}
+
+.inprogress-checkbox {
+  margin: 0 5px 0 0;
+}
+
+.inprogress-instruction-container {
+  border: 2px solid gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  margin: 20px auto 45px;
+  padding: 10px;
+  width: 90%;
+  word-wrap: break-word;
+}
+
+.inprogress-btn-finish {
+  background-color: rgb(68, 250, 150);
+  border: 0;
+  bottom: 0;
+  font-weight: 600;
+  left: 0;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+}
+
+.inprogress-btn-finish:disabled {
+  background-color: rgb(116, 255, 179);
+}
+
+
+@media screen and ( min-width : 750px ) {
+
+  .inprogress-header {
+    height: 300px;
+  }
+
+  .inprogress-title-container {
+    top: 150px;
+  }
+
+  .inprogress-title-container h2 {
+    font-size: 23px;
+  }
+
+  .inprogress-header-shared {
+    font-size: 14px;
+  }
+
+  .inprogress-category-container h4 {
+    font-size: 17px;
+  }
+
+  .inprogress-ingredients-container, .inprogress-instruction-container {
+    font-size: 16px;
+    width: 60%;
+  }
+
+  .inprogress-ingredients-title {
+    font-size: 20px;
+  }
+}

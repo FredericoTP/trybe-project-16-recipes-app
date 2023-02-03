@@ -1,0 +1,102 @@
+.listfavorites-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins , sans-serif;
+  margin: 0 auto 30px;
+  padding-bottom: 50px;
+  width: 90%;
+}
+
+.listfavorites-recipe {
+  border: 2px solid rgb(196, 196, 196);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 10px;
+  width: 100%;
+}
+
+.listfavorites-recipe:hover {
+  background-color: honeydew;
+  border: 2px solid black;
+}
+
+.listfavorites-recipe a {
+  text-decoration: none;
+}
+
+.listfavorites-image {
+  border-radius: 7px;
+  width: 100%;
+}
+
+.listfavorites-title {
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 5px;
+  padding: 5px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.listfavorites-category {
+  font-size: 13px;
+  margin-bottom: 0;
+  margin-left: 5px;
+  padding: 5px;
+  width: fit-content;
+}
+
+.listfavorites-btn-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listfavorites-btn-share-container {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+
+.listfavorites-share-btn {
+  border: 0;
+  border-radius: 100%;
+  height: 38px;
+  width: 38px;
+}
+
+.listfavorites-fav-btn {
+  border: 0;
+  border-radius: 100%;
+  height: 38px;
+  margin-right: 10px;
+  width: 38px;
+}
+
+.listfavorites-shered {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+@media screen and ( min-width : 500px ) {
+
+  .listfavorites-container {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .listfavorites-recipe {
+    width: 48%;
+  }
+}
+
+@media screen and ( min-width : 900px ) {
+
+  .listfavorites-recipe {
+    width: 24%;
+  }
+}

@@ -52,7 +52,14 @@ function ButtonRecipeDetails() {
         )
       }
       {
-        (!isDone()) && <p data-testid="recipe-finished">Recipe Finished</p>
+        (!isDone()) && (
+          <Link
+            className="btn-recipe-details"
+            to="/done-recipes"
+            data-testid="recipe-finished"
+          >
+            Recipe Finished
+          </Link>)
       }
     </div>
   );

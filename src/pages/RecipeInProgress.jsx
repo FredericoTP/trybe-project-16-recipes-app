@@ -28,7 +28,7 @@ function RecipeInProgress() {
 
   if (detailsFetch.loading) {
     return (
-      <div>
+      <div className="recipeinprogress-container">
         <Loading />
       </div>
     );

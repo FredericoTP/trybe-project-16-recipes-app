@@ -176,10 +176,10 @@ function RecipeDetails() {
                     className="details-favorite-btn"
                     onClick={ () => functions.handleFavorite({
                       id: item.idDrink,
-                      type: 'Drink',
+                      type: 'drink',
                       nationality: item.strArea,
                       category: item.strCategory,
-                      alcoholicOrNot: '',
+                      alcoholicOrNot: item.strAlcoholic,
                       name: item.strDrink,
                       image: item.strDrinkThumb,
                     }) }

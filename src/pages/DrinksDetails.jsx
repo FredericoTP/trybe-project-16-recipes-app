@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import MainContext from '../context/MainContext';
 import RecipeDetails from '../components/RecipeDetails';
 import Loading from '../components/Loading';
+import '../style/DrinksDetails.css';
 
 function DrinksDetails() {
   const { id } = useParams();
@@ -18,7 +19,7 @@ function DrinksDetails() {
 
   if (carouselFetch.loading || detailsFetch.loading) {
     return (
-      <div>
+      <div className="drinksdetails-container">
         <Loading />
       </div>
     );

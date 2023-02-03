@@ -8,9 +8,12 @@ import '../style/Carousel.css';
 export default function Carousel() {
   const { carouselFetch } = useContext(MainContext);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 200,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
     slidesToShow: 2,
     slidesToScroll: 2,
   };
