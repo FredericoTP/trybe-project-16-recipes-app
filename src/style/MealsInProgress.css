@@ -64,10 +64,10 @@
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   display: flex;
-  left: 5px;
+  left: 10px;
   padding: 5px;
   position: absolute;
-  top: 5px;
+  top: 10px;
 }
 
 .inprogress-category-container h4 {

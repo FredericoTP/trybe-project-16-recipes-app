@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Recipes from '../components/Recipes';
 import MainContext from '../context/MainContext';
 import Loading from '../components/Loading';
+import '../style/Meals.css';
 
 function Meals() {
   const { loading, fetchApi, dataValue, categoryFetch } = useContext(MainContext);
@@ -20,7 +21,7 @@ function Meals() {
 
   if (loading || categoryFetch.loading) {
     return (
-      <div>
+      <div className="meals-container">
         <Header />
         <Loading />
         <Footer />
