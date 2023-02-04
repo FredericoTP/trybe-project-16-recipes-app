@@ -125,7 +125,13 @@
 }
 
 .inprogress-checkbox {
+  accent-color: rgb(68, 250, 150);
   margin: 0 5px 0 0;
+}
+
+.inprogress-checkbox:checked {
+  background-color: green;
+  border-color: rgb(68, 250, 150);
 }
 
 .inprogress-instruction-container {
