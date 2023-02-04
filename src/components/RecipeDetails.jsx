@@ -7,7 +7,7 @@ import ButtonRecipeDetails from './ButtonRecipeDetails';
 import LocalStorageContext from '../context/LocalStorageContext';
 import notFavorited from '../images/whiteHeartIcon.svg';
 import favorited from '../images/blackHeartIcon.svg';
-import beef from '../images/beef.png';
+import beef from '../images/beef.svg';
 import breakfast from '../images/breakfast.png';
 import chicken from '../images/chicken.png';
 import dessert from '../images/dessert.png';

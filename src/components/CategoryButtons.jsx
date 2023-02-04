@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import MainContext from '../context/MainContext';
-import beef from '../images/beef.png';
+import beef from '../images/beef.svg';
 import breakfast from '../images/breakfast.png';
 import chicken from '../images/chicken.png';
 import dessert from '../images/dessert.png';

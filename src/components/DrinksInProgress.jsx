@@ -8,7 +8,7 @@ import notFavorited from '../images/whiteHeartIcon.svg';
 import favorited from '../images/blackHeartIcon.svg';
 import '../style/RecipeInProgress.css';
 import '../style/MealsInProgress.css';
-import beef from '../images/beef.png';
+import beef from '../images/beef.svg';
 import breakfast from '../images/breakfast.png';
 import chicken from '../images/chicken.png';
 import dessert from '../images/dessert.png';
