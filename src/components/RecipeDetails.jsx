@@ -8,16 +8,16 @@ import LocalStorageContext from '../context/LocalStorageContext';
 import notFavorited from '../images/whiteHeartIcon.svg';
 import favorited from '../images/blackHeartIcon.svg';
 import beef from '../images/beef.svg';
-import breakfast from '../images/breakfast.png';
-import chicken from '../images/chicken.png';
-import dessert from '../images/dessert.png';
-import goat from '../images/goat.png';
-import ordinary from '../images/ordinary.png';
-import cocktail from '../images/cocktail.png';
-import shake from '../images/shake.png';
-import other from '../images/other.png';
-import cocoa from '../images/cocoa.png';
-import foodDrink from '../images/food-drink.png';
+import breakfast from '../images/breakfast.svg';
+import chicken from '../images/chicken.svg';
+import dessert from '../images/dessert.svg';
+import goat from '../images/goat.svg';
+import ordinary from '../images/ordinary.svg';
+import cocktail from '../images/cocktail.svg';
+import shake from '../images/shake.svg';
+import other from '../images/other.svg';
+import cocoa from '../images/cocoa.svg';
+import foodDrink from '../images/food-drink.svg';
 import '../style/RecipeDetails.css';
 
 function RecipeDetails() {
@@ -87,7 +87,11 @@ function RecipeDetails() {
           <div className="details-container" key={ item.strMeal }>
             <div className="details-header">
               <div className="details-header-category">
-                <img src={ handleCategory(item.strCategory) } alt="category" />
+                <img
+                  className="details-header-category-image"
+                  src={ handleCategory(item.strCategory) }
+                  alt="category"
+                />
                 <h4 data-testid="recipe-category">{ item.strCategory }</h4>
               </div>
               <h2 data-testid="recipe-title">{ item.strMeal }</h2>
@@ -159,7 +163,11 @@ function RecipeDetails() {
           <div className="details-container" key={ item.strDrink }>
             <div className="details-header">
               <div className="details-header-category">
-                <img src={ handleCategory(item.strCategory) } alt="category" />
+                <img
+                  className="details-header-category-image"
+                  src={ handleCategory(item.strCategory) }
+                  alt="category"
+                />
                 <h4 data-testid="recipe-category">{ item.strCategory }</h4>
               </div>
               <h2 data-testid="recipe-title">{ item.strDrink }</h2>

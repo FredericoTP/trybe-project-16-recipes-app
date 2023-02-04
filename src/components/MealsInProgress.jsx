@@ -9,16 +9,16 @@ import favorited from '../images/blackHeartIcon.svg';
 import '../style/RecipeInProgress.css';
 import '../style/MealsInProgress.css';
 import beef from '../images/beef.svg';
-import breakfast from '../images/breakfast.png';
-import chicken from '../images/chicken.png';
-import dessert from '../images/dessert.png';
-import goat from '../images/goat.png';
-import ordinary from '../images/ordinary.png';
-import cocktail from '../images/cocktail.png';
-import shake from '../images/shake.png';
-import other from '../images/other.png';
-import cocoa from '../images/cocoa.png';
-import foodDrink from '../images/food-drink.png';
+import breakfast from '../images/breakfast.svg';
+import chicken from '../images/chicken.svg';
+import dessert from '../images/dessert.svg';
+import goat from '../images/goat.svg';
+import ordinary from '../images/ordinary.svg';
+import cocktail from '../images/cocktail.svg';
+import shake from '../images/shake.svg';
+import other from '../images/other.svg';
+import cocoa from '../images/cocoa.svg';
+import foodDrink from '../images/food-drink.svg';
 
 const copy = require('clipboard-copy');
 
@@ -156,7 +156,11 @@ function MealsInProgress() {
 
               </div>
               <div className="inprogress-category-container">
-                <img src={ handleCategory(item.strCategory) } alt="category" />
+                <img
+                  className="inprogress-category-icon"
+                  src={ handleCategory(item.strCategory) }
+                  alt="category"
+                />
                 <h4 data-testid="recipe-category">{ item.strCategory }</h4>
               </div>
               <div className="inprogress-title-container">

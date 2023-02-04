@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import MainContext from '../context/MainContext';
-import foodDrink from '../images/food-drink.png';
+import foodDrink from '../images/food-drink.svg';
 import imgMeal from '../images/mealIcon.svg';
 import imgDrink from '../images/drinkIcon.svg';
 import '../style/FilterDoneRecipes.css';

@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
-import doneIcon from '../images/done.png';
-import favoriteIcon from '../images/favorite.png';
-import logoutIcon from '../images/logout.png';
+import doneIcon from '../images/done.svg';
+import favoriteIcon from '../images/favorite.svg';
+import logoutIcon from '../images/logout.svg';
 import '../style/ProfileCard.css';
 
 function ProfileCard() {

@@ -27,6 +27,7 @@
 
 .profile-icon-image {
   margin-right: 20px;
+  width: 40px;
 }
 
 @media screen and ( min-width : 500px ) {

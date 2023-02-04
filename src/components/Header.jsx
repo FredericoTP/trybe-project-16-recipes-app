@@ -38,6 +38,7 @@ function Header() {
         <div className="profile-search-container">
           <Link to="/profile">
             <img
+              className="header-profile-icon"
               src={ imgProfile }
               alt="profile"
               data-testid="profile-top-btn"
@@ -51,6 +52,7 @@ function Header() {
                 onClick={ () => setInputDisabled(!inputDisabled) }
               >
                 <img
+                  className="header-search-icon"
                   src={ imgSearch }
                   alt="search"
                   data-testid="search-top-btn"

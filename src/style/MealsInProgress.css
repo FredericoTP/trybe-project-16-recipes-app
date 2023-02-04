@@ -94,6 +94,10 @@
   text-align: center;
 }
 
+.inprogress-category-icon {
+  width: 32px;
+}
+
 .inprogress-ingredients-container {
   border: 2px solid gray;
   border-radius: 10px;

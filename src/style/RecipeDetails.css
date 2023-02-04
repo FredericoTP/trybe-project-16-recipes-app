@@ -26,7 +26,12 @@
 .details-header-category {
   align-items: center;
   display: flex;
+  margin: 0 0 5px;
   padding: 5px;
+}
+
+.details-header-category-image {
+  width: 32px;
 }
 
 .details-header h2 {
