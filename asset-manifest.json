@@ -1,25 +1,38 @@
 {
   "files": {
-    "main.css": "/trybe-project-16-recipes-app/static/css/main.9bf2c008.css",
-    "main.js": "/trybe-project-16-recipes-app/static/js/main.ae177d2c.js",
+    "main.css": "/trybe-project-16-recipes-app/static/css/main.e003a804.css",
+    "main.js": "/trybe-project-16-recipes-app/static/js/main.c726333e.js",
     "static/media/notfound.jpeg": "/trybe-project-16-recipes-app/static/media/notfound.5dc7a5f539493e768bc2.jpeg",
     "static/media/login.jpg": "/trybe-project-16-recipes-app/static/media/login.6403c7759ba4e75da296.jpg",
     "static/media/login2.jpg": "/trybe-project-16-recipes-app/static/media/login2.a76e083e36423f24ec13.jpg",
     "static/media/recipes-app-logo.png": "/trybe-project-16-recipes-app/static/media/recipes-app-logo.46372e7f1a9b22805907.png",
-    "static/media/mealIcon.svg": "/trybe-project-16-recipes-app/static/media/mealIcon.40029e7f1422ba5a1bf1c10fa4f59030.svg",
-    "static/media/shareIcon.svg": "/trybe-project-16-recipes-app/static/media/shareIcon.87def1bd1dff9af9263f046c3b9bd31a.svg",
-    "static/media/profileIcon.svg": "/trybe-project-16-recipes-app/static/media/profileIcon.44eb3608f431845fe2fc2d2a23d758ae.svg",
-    "static/media/whiteHeartIcon.svg": "/trybe-project-16-recipes-app/static/media/whiteHeartIcon.2b822118952dc5140129c6349fcd0472.svg",
-    "static/media/searchIcon.svg": "/trybe-project-16-recipes-app/static/media/searchIcon.7353564d025de989f86f66ecb0202a04.svg",
-    "static/media/blackHeartIcon.svg": "/trybe-project-16-recipes-app/static/media/blackHeartIcon.083cb006913d197c95857ebfa2161db7.svg",
-    "static/media/drinkIcon.svg": "/trybe-project-16-recipes-app/static/media/drinkIcon.efc0d3c156e5da73e44a826c8d67b142.svg",
+    "static/media/food-drink.svg": "/trybe-project-16-recipes-app/static/media/food-drink.c8e67c2299488217a2da91a1d9c8f682.svg",
     "static/media/beef.svg": "/trybe-project-16-recipes-app/static/media/beef.18f7247085fbdd7c2fcb0a8396641c12.svg",
+    "static/media/other.svg": "/trybe-project-16-recipes-app/static/media/other.d9e0b2d9364fc393bba9d70389fcf6de.svg",
+    "static/media/cocktail.svg": "/trybe-project-16-recipes-app/static/media/cocktail.cba0ed0868b0218c3b2370802e511393.svg",
+    "static/media/goat.svg": "/trybe-project-16-recipes-app/static/media/goat.3645a96bf7541ec750ebf6cc265773c5.svg",
+    "static/media/breakfast.svg": "/trybe-project-16-recipes-app/static/media/breakfast.82074dad9ba2121803d1fbbf4c203f12.svg",
+    "static/media/ordinary.svg": "/trybe-project-16-recipes-app/static/media/ordinary.8f8236b74a90597cc84676a994753ed3.svg",
+    "static/media/dessert.svg": "/trybe-project-16-recipes-app/static/media/dessert.cecb03707574818ca706e951a9a5a5b4.svg",
+    "static/media/shake.svg": "/trybe-project-16-recipes-app/static/media/shake.f6e4c0c4a3426cb2c0198c672ebf0f2b.svg",
+    "static/media/mealIcon.svg": "/trybe-project-16-recipes-app/static/media/mealIcon.6885d74da5d260ffa879e303f5650891.svg",
+    "static/media/shareIcon.svg": "/trybe-project-16-recipes-app/static/media/shareIcon.785b229b9c8c8179e15d21c53045466a.svg",
     "index.html": "/trybe-project-16-recipes-app/index.html",
-    "main.9bf2c008.css.map": "/trybe-project-16-recipes-app/static/css/main.9bf2c008.css.map",
-    "main.ae177d2c.js.map": "/trybe-project-16-recipes-app/static/js/main.ae177d2c.js.map"
+    "static/media/chicken.svg": "/trybe-project-16-recipes-app/static/media/chicken.0416c37beedc837ea5471bfd9b19bd44.svg",
+    "static/media/cocoa.svg": "/trybe-project-16-recipes-app/static/media/cocoa.81357ca8e70ee056e1e6f4f347e26aac.svg",
+    "static/media/logout.svg": "/trybe-project-16-recipes-app/static/media/logout.955cf68a1a9dc81915bc5ddf77dcf45f.svg",
+    "static/media/favorite.svg": "/trybe-project-16-recipes-app/static/media/favorite.623d098c1e9c33609d47871ed57a62ba.svg",
+    "static/media/whiteHeartIcon.svg": "/trybe-project-16-recipes-app/static/media/whiteHeartIcon.6e772d41a210837f1e1f33a682df5990.svg",
+    "static/media/done.svg": "/trybe-project-16-recipes-app/static/media/done.d38057ab3105bf793fe9429e35703af7.svg",
+    "static/media/drinkIcon.svg": "/trybe-project-16-recipes-app/static/media/drinkIcon.7f68a255c1f74aac61e082c913627522.svg",
+    "static/media/searchIcon.svg": "/trybe-project-16-recipes-app/static/media/searchIcon.43d464e1c7fc3feb9377a68ed4a3c58f.svg",
+    "static/media/blackHeartIcon.svg": "/trybe-project-16-recipes-app/static/media/blackHeartIcon.c690b126da3e64ce7b571a21f6fa1714.svg",
+    "static/media/profileIcon.svg": "/trybe-project-16-recipes-app/static/media/profileIcon.a7d927f72b93e5fb85602c6bd9019b89.svg",
+    "main.e003a804.css.map": "/trybe-project-16-recipes-app/static/css/main.e003a804.css.map",
+    "main.c726333e.js.map": "/trybe-project-16-recipes-app/static/js/main.c726333e.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bf2c008.css",
-    "static/js/main.ae177d2c.js"
+    "static/css/main.e003a804.css",
+    "static/js/main.c726333e.js"
   ]
 }
