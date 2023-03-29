@@ -176,7 +176,7 @@ O projeto foi feito em equipe e trabalhamos utilizando a metodologia Kanban. Mem
 
 ## 100% :heavy_check_mark:
 
-![Project-TrybeWallet-Grade]()
+![Project-Recipes-App-Grade](https://raw.githubusercontent.com/FredericoTP/trybe-project-16-recipes-app/main/images/recipesapp-grade.png)
 
 </details>
 <br />
@@ -188,8 +188,18 @@ O projeto foi feito em equipe e trabalhamos utilizando a metodologia Kanban. Mem
 
 </summary>
 
-![Project-TrybeWallet-Preview1]()
+![Project-Recipes-App-Preview1](https://raw.githubusercontent.com/FredericoTP/trybe-project-16-recipes-app/main/images/recipesapp-preview1.png)
  
-![Project-TrybeWallet-Preview2]()
+![Project-Recipes-App-Preview2](https://raw.githubusercontent.com/FredericoTP/trybe-project-16-recipes-app/main/images/recipesapp-preview2.png)
+
+![Project-Recipes-App-Preview3](https://raw.githubusercontent.com/FredericoTP/trybe-project-16-recipes-app/main/images/recipesapp-preview3.png)
+
+![Project-Recipes-App-Preview4](https://raw.githubusercontent.com/FredericoTP/trybe-project-16-recipes-app/main/images/recipesapp-preview4.png)
+
+![Project-Recipes-App-Preview5](https://raw.githubusercontent.com/FredericoTP/trybe-project-16-recipes-app/main/images/recipesapp-preview5.png)
+
+![Project-Recipes-App-Preview6](https://raw.githubusercontent.com/FredericoTP/trybe-project-16-recipes-app/main/images/recipesapp-preview6.png)
+
+![Project-Recipes-App-Preview7](https://raw.githubusercontent.com/FredericoTP/trybe-project-16-recipes-app/main/images/recipesapp-preview7.png)
  
 </details>
