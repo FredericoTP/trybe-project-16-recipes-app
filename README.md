@@ -14,8 +14,6 @@ O projeto foi feito em equipe e trabalhamos utilizando a metodologia Kanban. Mem
 - Antônio Gabriel
 - Juvenal Netto
 - Lucas Almeida
-- Mateus Galvão
-- Sérgio Lima
 
 <br />
 
